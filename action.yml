@@ -1,0 +1,12 @@
+name: "Repository mirror"
+description: "Push mirror to gitlab using token."
+branding:
+  icon: "archive"
+  color: "green"
+inputs:
+  token_url:
+    description: "Secret key for push operation with remote repo, use the https://<token_name>:<token_secret>@gitlab.com/<repo_path> format."
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
