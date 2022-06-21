@@ -5,6 +5,7 @@ RUN apk update && apk upgrade && \
 
 COPY push.sh /push.sh
 
-RUN chmod +x /push.sh
+RUN chmod +x /push.sh && \
+    git config --global --add safe.directory /github/workspace
 
 ENTRYPOINT ["/push.sh"]
