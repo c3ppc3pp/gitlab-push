@@ -5,4 +5,6 @@ RUN apk update && apk upgrade && \
 
 COPY push.sh /push.sh
 
-ENTRYPOINT ["/bin/ash" "/push.sh"]
+RUN chmod +x /push.sh
+
+ENTRYPOINT ["/push.sh"]
