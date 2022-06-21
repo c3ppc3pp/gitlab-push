@@ -5,4 +5,4 @@ RUN apk update && apk upgrade && \
 
 COPY push.sh /push.sh
 
-ENTRYPOINT ["/bin/sh push.sh"]
+ENTRYPOINT ["/bin/sh" "/push.sh"]
